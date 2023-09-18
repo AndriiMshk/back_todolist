@@ -1,6 +1,6 @@
-import TodolistModel from './model.js'
+import TodolistModel from './todolistModel.js'
 
-class Service {
+class TodolistService {
   async create(todolist) {
     return TodolistModel.create(todolist)
   }
@@ -57,4 +57,4 @@ class Service {
   }
 }
 
-export default new Service()
+export default new TodolistService()

@@ -5,9 +5,9 @@ const TaskSchema = new mongoose.Schema({
   isDone: { type: Boolean, required: true },
 })
 
-const Model = new mongoose.Schema({
+const TodolistModel = new mongoose.Schema({
   title: { type: String, required: true },
   tasks: [TaskSchema],
 })
 
-export default mongoose.model('Todolist', Model)
+export default mongoose.model('Todolist', TodolistModel)

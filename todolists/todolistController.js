@@ -1,6 +1,6 @@
-import TodolistService from './service.js'
+import TodolistService from './todolistService.js'
 
-class Controller {
+class TodolistController {
   async create(req, res, next) {
     try {
       const todolist = await TodolistService.create({ ...req.body, tasks: [] })
@@ -68,4 +68,4 @@ class Controller {
   }
 }
 
-export default new Controller()
+export default new TodolistController()
