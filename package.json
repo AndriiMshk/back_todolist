@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "format": "prettier --write \"**/*.js\""
+    "format": "prettier --write \"**/*.js\"",
+    "generate-docs": "node generate-swagger.js > docs/swagger.json"
   },
   "keywords": [],
   "author": "",
