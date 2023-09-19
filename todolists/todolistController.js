@@ -3,7 +3,7 @@ import TodolistService from './todolistService.js'
 class TodolistController {
   async create(req, res, next) {
     try {
-      const todolist = await TodolistService.create({ ...req.body, tasks: [] })
+      const todolist = await TodolistService.create(req.body, req.userId)
       res.json(todolist)
     } catch (err) {
       next(err)
@@ -12,7 +12,7 @@ class TodolistController {
 
   async getAll(req, res, next) {
     try {
-      const todolists = await TodolistService.getAll()
+      const todolists = await TodolistService.getAll(req.userId)
       res.json(todolists)
     } catch (err) {
       next(err)

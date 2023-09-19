@@ -1,12 +1,13 @@
 import TodolistModel from './todolistModel.js'
 
 class TodolistService {
-  async create(todolist) {
-    return TodolistModel.create(todolist)
+  async create(todolist, userId) {
+    todolist.userId = userId;
+    return TodolistModel.create(todolist);
   }
 
-  async getAll() {
-    return TodolistModel.find()
+  async getAll(userId) {
+    return TodolistModel.find({ userId: userId });
   }
 
   async update(id, todolist) {
